@@ -1,0 +1,87 @@
+body{
+	background-color: black;
+	color:white;
+
+}
+
+.header_div{
+	background-color: #8C8C8C;
+	padding:1px;
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+.start_div{
+	position: absolute;
+	top:140px;
+	left:0;
+}
+
+.game_display_div{
+	position:absolute;
+	top:235px;
+	left:0;
+	background-color: white;
+	width:500px;
+	height:300px;
+	color:black;
+	
+	}
+
+.player_1_div{
+	border:2px solid gray;
+	position: absolute;
+	top:20px;
+	left:0;
+	width:150px;
+	height:200px;
+}
+
+.player_2_div{
+	border:2px solid gray;
+	position: absolute;
+	top:20px;
+	left:340px;
+	width:150px;
+	height:200px;
+}
+
+.result_div{
+	border:2px solid gray;
+	position: absolute;
+	top:20px;
+	left:170px;
+	width:150px;
+	height:200px;
+}
+
+.choice:hover{
+	color:gray;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.player_name{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.message_div{
+	position: absolute;
+	top:600px;
+	left:0;
+	background-color: white;
+	width:500px;
+	height:200px;
+}
+
+.message_display_div{
+	background-color: gray;
+	width:500px;
+	height:165px;
+}
+.message_input_div{
+	position: relative;
+	top:6px;
+}
