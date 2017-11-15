@@ -52,12 +52,12 @@
 
 function display(){
 
-  var name_div = $('<div class="player_name">Player: '+name+'</div><br>');
+  // var name_div = $('<div class="player_name">Player: '+name+'</div><br>');
   var choice_rock = $('<div class="choice">Rock</div>');
   var choice_paper = $('<div class="choice">Paper</div>');
   var choice_scissors = $('<div class="choice">Scissors</div>');
 
-  $(".player_"+player_number+"_div").append(name_div);
+  // $(".player_"+player_number+"_div").append(name_div);
   $(".player_"+player_number+"_div").append(choice_rock);
   $(".player_"+player_number+"_div").append(choice_paper);
   $(".player_"+player_number+"_div").append(choice_scissors);
@@ -66,6 +66,8 @@ function display(){
   ref.on('value',function(snapshot){
     var name_1 = snapshot.val().Player1.name;
     var name_2 = snapshot.val().Player2.name;
-    (".player_1_div").child(player_name).text();
-    (".player_2_div").child(player_name).text();
+    console.log(name_1);
+    console.log(name_2);
+    $(".player_1_div").children(".player_name").text(name_1);
+    $(".player_2_div").children(".player_name").text(name_2);
   })
