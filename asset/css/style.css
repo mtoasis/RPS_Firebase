@@ -56,6 +56,11 @@ body{
 	height:200px;
 }
 
+.winner_div{
+	font-size: 20px;
+	font-weight: bold;
+}
+
 .choice:hover{
 	color:gray;
 	font-weight: bold;
@@ -77,11 +82,22 @@ body{
 }
 
 .message_display_div{
-	background-color: gray;
-	width:500px;
+	/*background-color: gray;*/
+	border: dashed 3px gray;
+	width:450px;
 	height:165px;
+	color:black;
+	 /* Box-model */
+ 	 overflow: auto;
+ 	 padding:0 15px;
 }
 .message_input_div{
 	position: relative;
 	top:6px;
+	width:500px;
+}
+
+#message_input{
+
+	width:400px;
 }
