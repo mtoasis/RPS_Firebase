@@ -84,10 +84,11 @@ body{
 	font-size: 20px;
 	font-weight: bold;
 }
-
-.choice:hover{
-	color:gray;
+.choice{
 	font-weight: bold;
+}
+.choice:hover{
+	color:gray;	
 	cursor: pointer;
 	font-size:25px;
 }
