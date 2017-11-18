@@ -30,6 +30,8 @@
 
      $("#start_button").on("click",function(){
 
+      $("#user_name").css("display","none");
+
         if (flag){
           flag =false;
 
@@ -298,6 +300,10 @@ function remove_ready(){
     $(".game_display_div").append('<div class="player_1_ready_div">')
     $(".game_display_div").append('<div class="player_2_ready_div">')
 }
+
+$("#user_name").on("click",function(){
+  $("#user_name").attr("placeholder","")
+})
 
 
 

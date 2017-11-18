@@ -1,6 +1,8 @@
 body{
 	background-color: black;
 	color:white;
+	position:relative;
+	left:30%;
 
 }
 
@@ -8,6 +10,7 @@ body{
 	/*background-color: blue;*/
 	width:160px;
 	height:50px;
+	font-weight: bold;
 }
 
 .player_1_ready_div{
@@ -22,47 +25,49 @@ body{
 	right:5px;
 }
 
-.header_div{
-	background-color: #8C8C8C;
+.header_div{	
 	padding:1px;
 	position: absolute;
 	top:0;
-	left:0;
+	left:-5px;
+	z-index: 1;
 }
 
 .start_div{
 	position: absolute;
-	top:140px;
-	left:0;
+	top:150px;
+	left:75px;
 }
 
 .game_display_div{
 	position:absolute;
-	top:235px;
+	top:310px;
 	left:0;
 	background-color: white;
 	width:500px;
 	height:300px;
 	color:black;
-	
+	border:3px blue solid;	
 	}
 
 .player_1_div{
 	border:2px solid gray;
 	position: absolute;
 	top:20px;
-	left:0;
-	width:150px;
-	height:200px;
+	left:3px;
+	width:130px;
+	height:173px;
+	padding:14px;
 }
 
 .player_2_div{
 	border:2px solid gray;
 	position: absolute;
 	top:20px;
-	left:340px;
-	width:150px;
-	height:200px;
+	left:332px;
+	width:130px;
+	height:173px;
+	padding:14px;
 }
 
 .result_div{
@@ -70,8 +75,9 @@ body{
 	position: absolute;
 	top:20px;
 	left:170px;
-	width:150px;
-	height:200px;
+	width:124px;
+	height:174px;
+	padding:14px;
 }
 
 .winner_div{
@@ -93,30 +99,51 @@ body{
 
 .message_div{
 	position: absolute;
-	top:600px;
+	top:625px;
 	left:0;
 	background-color: white;
 	width:500px;
 	height:200px;
+	border:solid blue 3px;
 }
 
 .message_display_div{
-	/*background-color: gray;*/
-	border: dashed 3px gray;
+	/*border: dashed 3px gray;*/
 	width:450px;
 	height:165px;
 	color:black;
-	 /* Box-model */
  	 overflow: auto;
  	 padding:0 15px;
 }
 .message_input_div{
 	position: relative;
 	top:6px;
+	left:20px;
 	width:500px;
 }
 
 #message_input{
 
 	width:400px;
+}
+
+#user_name{
+	width:350px;
+	height:45px;
+	font-size:30px;
+	margin-bottom:5px;
+	border: 3px solid blue;
+}
+
+
+#start_button{
+	width:355px;
+	height:40px;
+	border:2px solid blue;
+	background-color: white;
+}
+
+#start_button:hover{
+	background-color: gray;
+	cursor:pointer;
 }
