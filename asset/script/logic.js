@@ -87,7 +87,7 @@
               })
 
              if (player_number==1){
-             ref.child("Players").child("Player2").on("value", function(snap){
+             ref.child("Players").child("Player2").once("value", function(snap){
               var isReady = snap.val().choice;
               if (isReady!="undecided"){
                 $(".player_2_ready_div").text("READY");
@@ -95,7 +95,7 @@
             })
             }
            else if (player_number==2){
-            ref.child("Players").child("Player1").on("value", function(snap){
+            ref.child("Players").child("Player1").once("value", function(snap){
               var isReady = snap.val().choice;
                 if (isReady!="undecided"){
                 $(".player_1_ready_div").text("READY");
@@ -160,6 +160,10 @@ function display(){
 
 
 $("#message_input_button").on("click",function(){
+
+  if (name==""){
+    name = "Guest"
+  }
 
   var message = $("#message_input").val();
   ref.child("Messages").push("<b>"+name+"</b>"+" : "+message);
@@ -261,19 +265,19 @@ database.ref().child("Messages").on("child_added",function(snapshot){
     remove_ready(); 
   }
 
-  if(winner !=""){
+  if(winner !="" && winner!="Tie"){
     ref.child("Players").child(win_p).once("value",function(snap){
       var wins = {wins: snap.val().wins+1};
-      ref.child("Players").child(win_p).update(wins)
+      ref.child("Players").child(win_p).update(wins);
     })
 
     ref.child("Players").child(lose_p).once("value",function(snap){
-      var losses = {losses: snap.val().losses+1}
-      ref.child("Players").child(lose_p).update(losses)
+      var losses = {losses: snap.val().losses+1};
+      ref.child("Players").child(lose_p).update(losses);
     })
 
-    $(".winner_div").text("Winner is: "+winner);
 
+    $(".winner_div").text("Winner is: "+winner);
 
   }
 
